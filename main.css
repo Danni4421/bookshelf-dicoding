@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+
+:root {
+    --primary: #0275d8;
+    --success: #5cb85c;
+    --danger: #d9534f;
+    --dark: #292b2c;
+    --light: #f7f7f7;
+
+    --shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--light);
+}
+
+header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 130px;
+    background-color: lightcoral;
+}
+
+input {
+    padding: 10px;
+    border-radius: 10px;
+    width: 80%;
+}
+
+.searchBar {
+    width: 400px;
+}
+
+.searchBar input {
+    padding: 10px 20px;
+    border: #e3e3e3;
+    outline: none;
+    transition: .5s;
+}
+
+.searchBar button {
+    border: var(--primary);
+    background-color: var(--primary);
+    color: #fff;
+    font-weight: 600;
+}
+
+.searchBar input:focus {
+    transition: 0.5s;
+    padding: 15px 20px;
+}
+
+.filteredBook {
+    width: 400px;
+    padding: 10px;
+    position: absolute;
+    background-color: var(--light);
+    border: 1px solid #000;
+    top:100px;
+    right: 250px;
+    display: none;
+}
+
+.x {
+    width: 30px;
+    height: 30px;
+    color: #fff;
+    border-radius: 5px;
+    border: var(--danger);
+    position: relative;
+    top: 0;
+    right: -350px;
+    background-color: var(--danger);
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.greeting-txt {
+    text-align: center;
+}
+
+#input-name {
+    width: 250px;
+    text-align: center;
+}
+
+.profile .greeting-txt input {
+    color: var(--dark);
+    width: 200px;
+	font-weight: 700;
+    font-size: 1.25rem;
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+    cursor: initial;
+}
+
+.btn {
+    padding: 10px;
+    margin: 5px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.img-profile {
+    width: 200px;
+    height: 200px;
+    margin: 0 0 20px;
+    border-radius: 50%;
+    border: 5px solid #333;
+}
+
+main {
+    display: flex;
+    padding: 30px;
+    background: var(--light);
+}
+
+.addBook {
+    flex: 2;
+    padding: 20px;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: 1px 1px 5px #000;
+    margin: 10px;
+    height: 450px;
+    position: relative;
+    top: -100px;
+    background-color: var(--light);
+    transition: 1s;
+}
+
+.bookContainer {
+    flex: 3;
+}
+
+#profile-input {
+    text-align: center;
+}
+
+.book1 {
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000;
+    margin: 10px;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+}
+
+.book2 {
+    padding: 20px;
+    box-shadow: 1px 1px 5px #000;
+    margin: 10px;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 15px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 5px #000;
+    margin: 15px 5px;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 5px;
+}
+
+.input label {
+    background-color: var(--light);
+    width: 200px;
+    border: 1px solid #000;
+    text-align: center;
+    border-radius: 10px;
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.input input {
+    width: 500px;
+    padding: 15px;
+}
+
+#input-checkbox {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    position: relative;
+    top: -10px;
+    left: -10px;
+}
+
+#label-checkbox {
+    border: none;
+}
+
+.baca-lagi {
+    background-color: var(--primary);
+    border: var(--primary);
+    font-weight: bold;
+}
+
+.sudah-baca {
+    background-color: var(--success);
+    border: var(--success);
+    font-weight: bold;
+}
+
+.hapus-buku {
+    background-color: var(--danger);
+    border: var(--danger);
+    font-weight: bold;
+}
+
+.btnFormBook {
+    width: 500px;
+    padding: 15px;
+    background-color: var(--success);
+    border: var(--success);
+}
+
+.button-add {
+    width: 300px;
+    padding: 20px;
+    margin: 10px auto;
+    border-radius: 20px;
+    color: #fff;
+    transition: 0.5s;
+    cursor: pointer;
+    background-color: var(--success);
+}
+
+.on {
+    background-color: var(--danger);
+    width: 300px;
+    padding: 20px;
+    transition: 0.5s;
+}
+
+.book-input {
+    overflow-y: hidden;
+}
+
+.form {
+    display: none;
+
+}
+
+.appear {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation-name: slide-in;
+    animation-duration: 1s;
+}
+
+@keyframes slide-in {   
+    from {
+        transform: translateY(-50%);
+    } else {
+        transform: translateY(0);
+    }
+}
+
+#input-checkbox {
+    padding: 20px;
+}
+
+.title {
+    font-family: 'Dancing Script', cursive;
+    letter-spacing: 2px;
+    font-size: 1.8em;
+}
+
+.initial {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+}
+
+.bookDate {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive */
+@media screen and (max-width: 992px) {
+    .filteredBook {
+        right: 145px;
+    }
+
+    .input input {
+        width: 300px;
+    }
+
+    .btnFormBook {
+        width: 300px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+    
+    .addBook {
+        position: inherit;
+    }
+
+    .space {
+        display: none;
+    }
+
+    .input input {
+        width: 500px;
+        transition: 1s;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .input input {
+        width: 300px;
+        transition: 1s;
+    }
+}

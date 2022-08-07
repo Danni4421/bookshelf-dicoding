@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshelf Apps</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <div class="space"></div>
+        <div class="searchBar">
+            <input type="text" id="form-input-search" name="input-search" placeholder="Cari buku pilihanmu">
+            <button id="saveSearch" class="btn">Cari</button>
+        </div>
+        <div class="filteredBook">
+            <button class="x">X</button>
+            <div id="bookContainer">
+
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="addBook">
+            <div class="profile">
+                <img src="img/Example-photo-profile.jpeg" alt="" class="img-profile">
+                <h2 class="greeting-txt">Halo
+                    <form id="formName">
+                        <input type="text" id="input-name" placeholder="Masukkan nama anda">
+                    </form>
+                </h2>
+                <h2>Selamat Datang
+                    di Bookshelf Apps!!
+                </h2>
+            </div>
+            <div class="button-add">
+                <h3>Tambah Buku</h3>
+            </div>
+            <div class="book-input">
+                <form id="book-input" class="form">
+                    <div class="input">
+                        <label for="input-title">Title</label>
+                        <input type="text" id="input-title" name="title" required>
+                    </div>
+                    <div class="input">
+                        <label for="input-author">Author</label>
+                        <input type="text" id="input-author" name="author" required>
+                    </div>
+                    <div class="input">
+                        <label for="input-year">Tahun Rilis</label>
+                        <input type="number" id="input-year" name="year" required>
+                    </div>
+                    <div class="input">
+                        <label for="input-date">Terget Baca</label>
+                        <input type="date" id="input-date" name="date" required>
+                    </div>
+                    <div class="input">
+                        <label for="input-checkbox" id="label-checkbox">Sudah Selesai Membaca</label>
+                        <input type="checkbox" id="input-checkbox" name="checkbox">
+                    </div>
+                    <button type="submit" id="submitButtonBookForm" class="btn btnFormBook">Tambah Buku</button>
+                </form>
+            </div>
+        </div>
+
+        <div class="bookContainer">
+            <div class="book1">
+                <div class="heading">
+                    <h1>Buku belum dibaca</h1>
+                </div>
+                <div id="book-not-completed">
+                </div>
+            </div>
+
+            <div class="book2">
+                <div class="heading">
+                    <h1>Buku sudah dibaca</h1>
+                </div>
+                <div id="book-completed">
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/book-add.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/storage.js"></script>
+    <script src="js/searchEngine.js"></script>
+</body>
+
+</html>
